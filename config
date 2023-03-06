@@ -1,0 +1,12 @@
+npm install --save-dev @babel/core @babel/preset-env babel-loader nodemon
+npm install --save-dev npm-run-all webpack webpack-cli webpack-node-externals
+
+
+"dev": "npm-run-all --parallel build dev:*"
+
+npm run build
+
+webpack --config webpack-server.js --mode=development
+webpack --config webpack-server.js --mode=production
+
+nodemon ./build-server/index.js
